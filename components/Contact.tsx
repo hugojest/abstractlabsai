@@ -26,8 +26,21 @@ export default function Contact() {
             </a>
           </div>
           <div className="spec-row">
+            <span className="text-teal">EMAIL</span>
+            <a
+              href="mailto:hugo.jest@gmail.com"
+              className="font-medium text-amber-deep hover:underline"
+            >
+              hugo.jest@gmail.com
+            </a>
+          </div>
+          <div className="spec-row">
+            <span className="text-teal">LOCATION</span>
+            <span className="font-medium">Chile (UTC-4)</span>
+          </div>
+          <div className="spec-row">
             <span className="text-teal">AVAILABILITY</span>
-            <span className="font-medium">Remote, project-based</span>
+            <span className="font-medium text-right">Remote, international · project-based</span>
           </div>
           <div className="spec-row">
             <span className="text-teal">BEST FOR</span>

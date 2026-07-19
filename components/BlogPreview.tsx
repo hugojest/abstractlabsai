@@ -9,6 +9,7 @@ export default function BlogPreview() {
           <div>
             <p className="eyebrow">05 — Knowledge Articles</p>
             <h2 className="mt-2 font-serif text-3xl md:text-[32px]">Writing on food, evaluation, and knowledge work.</h2>
+            <p className="mt-2 font-mono text-xs text-ink-soft">New articles added regularly.</p>
           </div>
           <Link href="/blog" className="font-mono text-sm text-amber-deep hover:underline">
             View all articles →

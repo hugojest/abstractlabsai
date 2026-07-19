@@ -15,8 +15,8 @@ export default function Hero() {
         <div>
           <p className="eyebrow">AI Food Expert · Culinary Domain Specialist</p>
           <h1 className="mt-2 font-serif text-[38px] leading-[1.08] tracking-tight md:text-[56px]">
-            Fifteen years in the kitchen, applied to{" "}
-            <em className="not-italic italic text-amber-deep">how AI understands food.</em>
+            AI evaluation and human feedback for food systems,{" "}
+            <em className="not-italic italic text-amber-deep">grounded in 15+ years of culinary expertise.</em>
           </h1>
           <p className="mt-6 max-w-[52ch] text-lg text-ink-soft">
             Hugo Jeria Strauss bridges culinary expertise and artificial intelligence — bringing
@@ -37,6 +37,10 @@ export default function Hero() {
               View selected work
             </Link>
           </div>
+          <p className="mt-5 font-mono text-sm text-ink-soft">
+            Available for AI Training, Food Domain Expert, Data Annotation, and AI Evaluation
+            projects.
+          </p>
         </div>
         <div className="rounded-sm border border-line-strong bg-paper-alt px-6 py-5 font-mono">
           {specs.map((s) => (
