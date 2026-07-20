@@ -8,11 +8,11 @@ const siteUrl = "https://hugojeriastrauss.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Hugo Jeria Strauss — AI Food Expert | Culinary Domain Specialist",
+    default: "Hugo Jeria Strauss | AI Food Expert & Culinary Domain Specialist",
     template: "%s — Hugo Jeria Strauss",
   },
   description:
-    "Hugo Jeria Strauss bridges culinary expertise and artificial intelligence through structured food knowledge, sensory evaluation, and AI evaluation for AI training companies, food technology teams, and research groups.",
+    "AI Food Expert specializing in food domain evaluation, culinary knowledge systems, and human feedback for artificial intelligence.",
   keywords: [
     "AI food expert",
     "culinary domain specialist",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Hugo Jeria Strauss" }],
   openGraph: {
-    title: "Hugo Jeria Strauss — AI Food Expert | Culinary Domain Specialist",
+    title: "Hugo Jeria Strauss | AI Food Expert & Culinary Domain Specialist",
     description:
-      "Bridging culinary expertise and artificial intelligence through structured knowledge, evaluation, and food domain understanding.",
+      "AI Food Expert specializing in food domain evaluation, culinary knowledge systems, and human feedback for artificial intelligence.",
     url: siteUrl,
     siteName: "Hugo Jeria Strauss",
     type: "website",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hugo Jeria Strauss — AI Food Expert | Culinary Domain Specialist",
+    title: "Hugo Jeria Strauss | AI Food Expert & Culinary Domain Specialist",
     description:
-      "Bridging culinary expertise and artificial intelligence through structured knowledge, evaluation, and food domain understanding.",
+      "AI Food Expert specializing in food domain evaluation, culinary knowledge systems, and human feedback for artificial intelligence.",
   },
   robots: { index: true, follow: true },
 };

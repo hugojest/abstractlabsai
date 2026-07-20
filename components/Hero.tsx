@@ -15,7 +15,7 @@ export default function Hero() {
         <div>
           <p className="eyebrow">AI Food Expert · Culinary Domain Specialist</p>
           <h1 className="mt-2 font-serif text-[38px] leading-[1.08] tracking-tight md:text-[56px]">
-            AI evaluation and human feedback for food systems,{" "}
+            AI training, evaluation, and human feedback for food systems,{" "}
             <em className="not-italic italic text-amber-deep">grounded in 15+ years of culinary expertise.</em>
           </h1>
           <p className="mt-6 max-w-[52ch] text-lg text-ink-soft">
@@ -30,6 +30,14 @@ export default function Hero() {
             >
               Get in touch
             </Link>
+            <a
+              href="/Hugo_Jeria_Strauss_AI_Food_Expert_Resume.pdf"
+              download
+              rel="noopener noreferrer"
+              className="rounded-sm border border-ink px-5 py-3 font-mono text-sm text-ink transition-colors hover:bg-paper-alt"
+            >
+              Download Resume
+            </a>
             <Link
               href="/#projects"
               className="rounded-sm border border-ink px-5 py-3 font-mono text-sm text-ink transition-colors hover:bg-paper-alt"
