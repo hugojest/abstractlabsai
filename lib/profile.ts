@@ -28,7 +28,7 @@ export const profile = {
     "AI Training",
   ],
 
-  resumeFileName: "Hugo_Jeria_Strauss_CV_AI_Food_Expert.pdf",
+  resumeFileName: "Hugo_Jeria_Strauss_Resume.pdf",
 } as const;
 
 export const resumeHref = `/${profile.resumeFileName}`;
