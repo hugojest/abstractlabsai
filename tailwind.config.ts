@@ -9,26 +9,27 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: "#F1EFE6",
-        "paper-alt": "#E7E2D3",
-        ink: "#20241F",
-        "ink-soft": "#4A4E44",
-        amber: "#9C6B16",
-        "amber-deep": "#7D5511",
-        teal: "#2E5C55",
-        line: "#D3CDB9",
-        "line-strong": "#B6AE93",
+        // Enterprise / AI-consulting dark palette.
+        bg: "#0F172A", // page background
+        surface: "#1E293B", // card / panel background
+        line: "#334155", // default border
+        "line-strong": "#475569", // emphasized border / hover border
+        fg: "#F8FAFC", // primary text
+        "fg-muted": "#CBD5E1", // secondary text
+        muted: "#94A3B8", // tertiary text, mono labels
+        accent: "#2563EB", // solid buttons, focus rings, strong borders
+        "accent-hover": "#1D4ED8", // button hover state
+        // Lighter accent tint used for TEXT on the dark background — #2563EB
+        // alone does not meet WCAG AA contrast for body-size text on #0F172A,
+        // so links / eyebrows / emphasis use this instead.
+        "accent-text": "#60A5FA",
       },
       fontFamily: {
-        serif: ["var(--font-newsreader)"],
-        sans: ["var(--font-plex-sans)"],
-        mono: ["var(--font-plex-mono)"],
+        sans: ["var(--font-sans)"],
+        mono: ["var(--font-mono)"],
       },
       maxWidth: {
         content: "1120px",
-      },
-      backgroundImage: {
-        "dash-line": "linear-gradient(to right, var(--tw-gradient-stops))",
       },
     },
   },

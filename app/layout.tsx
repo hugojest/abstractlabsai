@@ -2,43 +2,40 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-
-const siteUrl = "https://hugojeriastrauss.com";
+import { site } from "@/lib/site";
+import { profile } from "@/lib/profile";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(site.url),
   title: {
-    default: "Hugo Jeria Strauss | AI Food Expert & Culinary Domain Specialist",
-    template: "%s — Hugo Jeria Strauss",
+    default: site.title,
+    template: site.titleTemplate,
   },
-  description:
-    "AI Food Expert specializing in food domain evaluation, culinary knowledge systems, and human feedback for artificial intelligence.",
-  keywords: [
-    "AI food expert",
-    "culinary domain specialist",
-    "food domain expertise for AI",
-    "AI evaluation food",
-    "hospitality operations consultant",
-    "food knowledge management",
-    "sensory evaluation AI",
-  ],
-  authors: [{ name: "Hugo Jeria Strauss" }],
+  description: site.description,
+  keywords: [...site.keywords],
+  authors: [{ name: profile.name, url: site.url }],
+  creator: profile.name,
+  alternates: {
+    canonical: site.url,
+  },
   openGraph: {
-    title: "Hugo Jeria Strauss | AI Food Expert & Culinary Domain Specialist",
-    description:
-      "AI Food Expert specializing in food domain evaluation, culinary knowledge systems, and human feedback for artificial intelligence.",
-    url: siteUrl,
-    siteName: "Hugo Jeria Strauss",
+    title: site.title,
+    description: site.description,
+    url: site.url,
+    siteName: site.name,
     type: "website",
-    locale: "en_US",
+    locale: site.locale,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hugo Jeria Strauss | AI Food Expert & Culinary Domain Specialist",
-    description:
-      "AI Food Expert specializing in food domain evaluation, culinary knowledge systems, and human feedback for artificial intelligence.",
+    title: site.title,
+    description: site.description,
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
 };
 
 export default function RootLayout({
@@ -47,23 +44,32 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Hugo Jeria Strauss",
-    jobTitle: "AI Food Expert | Culinary Domain Specialist",
-    description:
-      "Gastronomy professional with 15+ years of experience in culinary operations, food and beverage systems, hospitality, and structured knowledge development, applied to AI training and evaluation.",
+    name: profile.name,
+    jobTitle: profile.title,
+    description: site.description,
+    email: `mailto:${profile.email}`,
+    url: site.url,
+    sameAs: [profile.linkedin, profile.github],
     knowsAbout: [
       "Food Domain Expertise",
       "Food & Beverage Knowledge",
       "Hospitality Operations",
       "AI Evaluation",
       "Knowledge Management",
+      "Human Feedback for AI",
     ],
-    url: siteUrl,
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "CL",
+    },
   };
 
   return (
     <html lang="en">
-      <body className="font-sans bg-paper text-ink antialiased">
+      <body className="bg-bg font-sans text-fg antialiased">
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

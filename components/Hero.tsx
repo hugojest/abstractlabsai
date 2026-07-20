@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { profile, resumeHref } from "@/lib/profile";
 
 const specs = [
   { k: "DOMAIN", v: "Food, Beverage & Culinary Systems" },
@@ -10,51 +11,48 @@ const specs = [
 
 export default function Hero() {
   return (
-    <section className="border-b border-line py-16 md:py-24">
+    <section className="border-b border-line py-20 md:py-28">
       <div className="mx-auto grid max-w-content grid-cols-1 gap-12 px-7 md:grid-cols-[1.15fr_.85fr] md:items-end md:gap-14">
         <div>
-          <p className="eyebrow">AI Food Expert · Culinary Domain Specialist</p>
-          <h1 className="mt-2 font-serif text-[38px] leading-[1.08] tracking-tight md:text-[56px]">
+          <p className="eyebrow">{profile.title}</p>
+          <h1 className="mt-3 text-[40px] font-semibold leading-[1.1] tracking-tight text-fg md:text-[58px]">
             AI training, evaluation, and human feedback for food systems,{" "}
-            <em className="not-italic italic text-amber-deep">grounded in 15+ years of culinary expertise.</em>
+            <span className="text-accent-text">grounded in 15+ years of culinary expertise.</span>
           </h1>
-          <p className="mt-6 max-w-[52ch] text-lg text-ink-soft">
+          <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-fg-muted">
             Hugo Jeria Strauss bridges culinary expertise and artificial intelligence — bringing
             structured food knowledge, sensory evaluation, and operational discipline to AI
             training and evaluation work.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3.5">
+          <div className="mt-9 flex flex-wrap gap-3.5">
             <Link
               href="/#contact"
-              className="rounded-sm border border-ink bg-ink px-5 py-3 font-mono text-sm text-paper transition-colors hover:border-amber-deep hover:bg-amber-deep"
+              className="rounded-sm bg-accent px-5 py-3 font-mono text-sm font-medium text-fg transition-colors hover:bg-accent-hover"
             >
               Get in touch
             </Link>
             <a
-              href="/Hugo_Jeria_Strauss_AI_Food_Expert_Resume.pdf"
+              href={resumeHref}
               download
               rel="noopener noreferrer"
-              className="rounded-sm border border-ink px-5 py-3 font-mono text-sm text-ink transition-colors hover:bg-paper-alt"
+              aria-label={`Download ${profile.name}'s CV (PDF)`}
+              className="rounded-sm border border-line-strong px-5 py-3 font-mono text-sm text-fg transition-colors hover:border-accent hover:text-accent-text"
             >
-              Download Resume
+              Download CV
             </a>
             <Link
               href="/#projects"
-              className="rounded-sm border border-ink px-5 py-3 font-mono text-sm text-ink transition-colors hover:bg-paper-alt"
+              className="rounded-sm border border-line-strong px-5 py-3 font-mono text-sm text-fg transition-colors hover:border-accent hover:text-accent-text"
             >
               View selected work
             </Link>
           </div>
-          <p className="mt-5 font-mono text-sm text-ink-soft">
-            Available for AI Training, Food Domain Expert, Data Annotation, and AI Evaluation
-            projects.
-          </p>
         </div>
-        <div className="rounded-sm border border-line-strong bg-paper-alt px-6 py-5 font-mono">
+        <div className="rounded-sm border border-line-strong bg-surface px-6 py-5 font-mono">
           {specs.map((s) => (
             <div className="spec-row" key={s.k}>
-              <span className="text-teal">{s.k}</span>
-              <span className="text-right font-medium text-ink">{s.v}</span>
+              <span className="text-muted">{s.k}</span>
+              <span className="text-right font-medium text-fg">{s.v}</span>
             </div>
           ))}
         </div>

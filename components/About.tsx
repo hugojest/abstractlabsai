@@ -1,16 +1,18 @@
+import { profile } from "@/lib/profile";
+
 export default function About() {
   return (
-    <section id="about" className="border-b border-line py-16 md:py-20 scroll-mt-20">
+    <section id="about" className="scroll-mt-20 border-b border-line py-16 md:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 gap-12 px-7 md:grid-cols-[.9fr_1.1fr] md:gap-14">
         <div>
           <p className="eyebrow">01 — About</p>
-          <h2 className="mt-2 font-serif text-3xl md:text-[32px]">
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-fg md:text-[32px]">
             Where kitchen judgment meets structured evaluation.
           </h2>
         </div>
-        <div className="space-y-4 text-ink-soft">
+        <div className="space-y-4 text-fg-muted">
           <p>
-            Hugo Jeria Strauss is a gastronomy professional with 15+ years of experience across
+            {profile.name} is a gastronomy professional with 15+ years of experience across
             culinary operations, food and beverage systems, and hospitality — the kind of
             experience that comes from running lines, developing dishes under real constraints,
             and managing service where consistency isn&apos;t optional.

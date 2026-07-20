@@ -1,50 +1,69 @@
+import { profile } from "@/lib/profile";
+
 export default function Contact() {
+  const linkedinLabel = profile.linkedin.replace(/^https?:\/\//, "").replace(/\/$/, "");
+  const githubLabel = profile.github.replace(/^https?:\/\//, "").replace(/\/$/, "");
+
   return (
-    <section id="contact" className="py-16 md:py-20 scroll-mt-20">
+    <section id="contact" className="scroll-mt-20 py-16 md:py-20">
       <div className="mx-auto grid max-w-content grid-cols-1 gap-14 px-7 md:grid-cols-[1.1fr_.9fr] md:items-start">
         <div>
           <p className="eyebrow">06 — Contact</p>
-          <h2 className="mt-2 font-serif text-3xl md:text-[34px]">
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight text-fg md:text-[34px]">
             Working on a food-related AI problem?
           </h2>
-          <p className="mt-4 max-w-[46ch] text-ink-soft">
+          <p className="mt-4 max-w-[46ch] text-fg-muted">
             If you&apos;re building or evaluating a system that touches food — recipes, kitchen
             workflow, sensory description, food safety — reach out on LinkedIn with what
             you&apos;re working on.
           </p>
         </div>
-        <div className="rounded-sm border border-line-strong bg-paper-alt p-6 font-mono">
+        <div className="rounded-sm border border-line-strong bg-surface p-6 font-mono">
           <div className="spec-row">
-            <span className="text-teal">LINKEDIN</span>
+            <span className="text-muted">LINKEDIN</span>
             <a
-              href="https://linkedin.com/in/hugojeriastrauss"
+              href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="font-medium text-amber-deep hover:underline"
+              aria-label={`${profile.name} on LinkedIn (opens in a new tab)`}
+              className="font-medium text-accent-text hover:underline"
             >
-              linkedin.com/in/hugojeriastrauss
+              {linkedinLabel}
             </a>
           </div>
           <div className="spec-row">
-            <span className="text-teal">EMAIL</span>
+            <span className="text-muted">GITHUB</span>
             <a
-              href="mailto:hugo.jest@gmail.com"
-              className="font-medium text-amber-deep hover:underline"
+              href={profile.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${profile.name} on GitHub (opens in a new tab)`}
+              className="font-medium text-accent-text hover:underline"
             >
-              hugo.jest@gmail.com
+              {githubLabel}
             </a>
           </div>
           <div className="spec-row">
-            <span className="text-teal">LOCATION</span>
-            <span className="font-medium">Chile (UTC-4)</span>
+            <span className="text-muted">EMAIL</span>
+            <a
+              href={`mailto:${profile.email}`}
+              aria-label={`Email ${profile.name}`}
+              className="font-medium text-accent-text hover:underline"
+            >
+              {profile.email}
+            </a>
           </div>
           <div className="spec-row">
-            <span className="text-teal">AVAILABILITY</span>
-            <span className="font-medium text-right">Remote, international · project-based</span>
+            <span className="text-muted">LOCATION</span>
+            <span className="font-medium text-fg">{profile.location}</span>
           </div>
           <div className="spec-row">
-            <span className="text-teal">BEST FOR</span>
-            <span className="font-medium text-right">AI eval · Food-tech advisory</span>
+            <span className="text-muted">AVAILABILITY</span>
+            <span className="font-medium text-right text-fg">{profile.workMode}</span>
+          </div>
+          <div className="spec-row">
+            <span className="text-muted">BEST FOR</span>
+            <span className="font-medium text-right text-fg">AI eval · Food-tech advisory</span>
           </div>
         </div>
       </div>

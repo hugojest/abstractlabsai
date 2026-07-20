@@ -28,25 +28,27 @@ const areas = [
 
 export default function Expertise() {
   return (
-    <section id="expertise" className="border-b border-line py-16 md:py-20 scroll-mt-20">
+    <section id="expertise" className="scroll-mt-20 border-b border-line py-16 md:py-20">
       <div className="mx-auto max-w-content px-7">
         <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
           <div>
             <p className="eyebrow">02 — Areas of Expertise</p>
-            <h2 className="mt-2 font-serif text-3xl md:text-[32px]">Five areas, one working vocabulary.</h2>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-fg md:text-[32px]">
+              Five areas, one working vocabulary.
+            </h2>
           </div>
-          <p className="max-w-[34ch] text-sm text-ink-soft">
+          <p className="max-w-[34ch] text-sm text-fg-muted">
             Each area below is a lens applied when reviewing, correcting, or structuring
             food-related content and systems.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-px border border-line-strong bg-line-strong sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
           {areas.map((a) => (
-            <div key={a.title} className="flex min-h-[190px] flex-col gap-3 bg-paper p-6">
-              <span className="font-mono text-xs text-amber-deep">{a.idx}</span>
-              <h3 className="font-serif text-xl leading-snug">{a.title}</h3>
-              <p className="text-sm text-ink-soft">{a.body}</p>
+            <div key={a.title} className="flex min-h-[190px] flex-col gap-3 bg-surface p-6">
+              <span className="font-mono text-xs text-accent-text">{a.idx}</span>
+              <h3 className="text-xl font-semibold leading-snug text-fg">{a.title}</h3>
+              <p className="text-sm text-fg-muted">{a.body}</p>
             </div>
           ))}
         </div>
